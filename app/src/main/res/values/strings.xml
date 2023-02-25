@@ -1,4 +1,5 @@
 <resources>
+    <string name="card_button">Xem thêm</string>
     <string name="app_name">hime-droid</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
