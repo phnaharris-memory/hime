@@ -286,7 +286,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn"
+            android:id="@+id/btnMore"
             style="?attr/borderlessButtonStyle"
             android:layout_width="236dp"
             android:layout_height="35dp"

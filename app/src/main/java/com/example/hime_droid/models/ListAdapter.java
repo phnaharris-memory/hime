@@ -31,7 +31,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
         private final TextView tvTitle;
         private final TextView tvShorttext;
-//        private final Button btn;
+        private final Button btnMore;
         private final MaterialCardView cardView;
         public String html;
 
@@ -45,9 +45,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public TextView getTvShortText() {
             return tvShorttext;
         }
-//        public Button getButton() {
-//            return btn;
-//        }
+        public Button getButtonMore() {
+            return btnMore;
+        }
         public MaterialCardView getCardView() {
             return cardView;
         }
@@ -58,10 +58,20 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
             tvTitle = (TextView) view.findViewById(R.id.title);
             tvShorttext = (TextView) view.findViewById(R.id.shorttext);
-//            btn = (Button) view.findViewById(R.id.btn);
+            btnMore = (Button) view.findViewById(R.id.btnMore);
             cardView = (MaterialCardView) view.findViewById(R.id.cardView);
 
             cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent webviewIntent = new Intent(ctx, WebviewActivity.class);
+                    Log.d("onclick", html);
+                    webviewIntent.putExtra("HTML", html);
+                    ctx.startActivity(webviewIntent);
+                }
+            });
+
+            btnMore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent webviewIntent = new Intent(ctx, WebviewActivity.class);
