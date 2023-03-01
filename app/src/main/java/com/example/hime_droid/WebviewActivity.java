@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 public class WebviewActivity extends AppCompatActivity {
@@ -31,6 +32,8 @@ public class WebviewActivity extends AppCompatActivity {
         Log.d("vao duoc webview", html);
 
         WebView myWebView = new WebView(this);
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         String encodedHtml = Base64.encodeToString(html.getBytes(),
                 Base64.NO_PADDING);
         myWebView.loadData(encodedHtml, "text/html", "base64");
