@@ -1,12 +1,14 @@
 package com.example.hime_droid.models;
 
 public class ItemModel {
-    public ItemModel(Integer id, String title, String shorttext, String html) {
+    public ItemModel(Integer id, String title, String shorttext, String html, String avatar) {
         this.id = id;
         this.title = title;
         this.shorttext = shorttext;
         this.html = html;
+        this.avatar = avatar;
     }
+
 
     public Integer getId() {
         return id;
@@ -40,6 +42,15 @@ public class ItemModel {
         this.html = html;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String avatar;
     public Integer id;
     public String title;
     public String shorttext;

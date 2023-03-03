@@ -2,11 +2,13 @@ package com.example.hime_droid.models;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,9 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hime_droid.R;
 import com.example.hime_droid.WebviewActivity;
+import com.example.hime_droid.helpers.ImageHttpRequest;
 import com.google.android.material.card.MaterialCardView;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
@@ -32,6 +37,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         private final TextView tvTitle;
         private final TextView tvShorttext;
         private final Button btnMore;
+        private final ImageView imgAvatar;
         private final MaterialCardView cardView;
         public String html;
 
@@ -51,6 +57,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public MaterialCardView getCardView() {
             return cardView;
         }
+        public ImageView getImgAvatar() {
+            return imgAvatar;
+        }
 
         public ViewHolder(View view) {
             super(view);
@@ -60,6 +69,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             tvShorttext = (TextView) view.findViewById(R.id.shorttext);
             btnMore = (Button) view.findViewById(R.id.btnMore);
             cardView = (MaterialCardView) view.findViewById(R.id.cardView);
+            imgAvatar = view.findViewById(R.id.imgAvatar);
 
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -114,6 +124,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         viewHolder.getTvTitle().setText(localDataSet.get(position).getTitle());
         viewHolder.getTvShortText().setText(localDataSet.get(position).getShorttext());
         viewHolder.setHtml(localDataSet.get(position).getHtml());
+        try {
+            viewHolder.getImgAvatar().setImageDrawable(new ImageHttpRequest().execute(localDataSet.get(position).getAvatar()).get());
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)

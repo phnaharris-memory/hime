@@ -234,13 +234,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <TextView
-                    android:id="@+id/textView"
+                <ImageView
+                    android:id="@+id/imgAvatar"
                     android:layout_width="115dp"
                     android:layout_height="102dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:drawableEnd="@drawable/book10"
                     android:gravity="bottom" />
 
                 <TextView

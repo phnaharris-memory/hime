@@ -51,7 +51,8 @@ public class ListActivity extends AppCompatActivity {
                             oneObject.getInt("id"),
                             oneObject.getString("title"),
                             oneObject.getString("shorttext"),
-                            oneObject.getString("html")
+                            oneObject.getString("html"),
+                            oneObject.getString("avatar")
                     ));
                 } catch (JSONException e) {
                     // Oops
