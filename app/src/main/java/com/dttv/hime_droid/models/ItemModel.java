@@ -1,4 +1,4 @@
-package com.example.hime_droid.models;
+package com.dttv.hime_droid.models;
 
 public class ItemModel {
     public ItemModel(Integer id, String title, String shorttext, String html, String avatar) {

@@ -1,4 +1,4 @@
-package com.example.hime_droid;
+package com.dttv.hime_droid;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.hime_droid.models.ItemModel;
-import com.example.hime_droid.models.ListAdapter;
+import com.dttv.hime_droid.models.ItemModel;
+import com.dttv.hime_droid.models.ListAdapter;
+import com.dttv.hime_droid.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

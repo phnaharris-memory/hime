@@ -1,4 +1,4 @@
-package com.example.hime_droid.helpers;
+package com.dttv.hime_droid.helpers;
 
 import android.os.AsyncTask;
 import android.util.Log;

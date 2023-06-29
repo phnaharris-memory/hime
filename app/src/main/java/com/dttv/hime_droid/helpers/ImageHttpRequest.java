@@ -1,4 +1,4 @@
-package com.example.hime_droid.helpers;
+package com.dttv.hime_droid.helpers;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;

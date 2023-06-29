@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.hime_droid'
+    namespace 'com.dttv.hime_droid'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.hime_droid"
+        applicationId "com.dttv.hime_droid"
         minSdk 21
         targetSdk 33
         versionCode 1

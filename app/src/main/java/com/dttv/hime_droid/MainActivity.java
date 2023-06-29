@@ -1,15 +1,16 @@
-package com.example.hime_droid;
+package com.dttv.hime_droid;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.example.hime_droid.helpers.Constant;
-import com.example.hime_droid.helpers.GetHttpRequest;
-import com.example.hime_droid.helpers.PostHttpRequest;
-import com.example.hime_droid.helpers.Upload;
-import com.example.hime_droid.models.ItemModel;
-import com.example.hime_droid.models.ListAdapter;
+import com.dttv.hime_droid.helpers.GetHttpRequest;
+import com.dttv.hime_droid.helpers.PostHttpRequest;
+import com.dttv.hime_droid.helpers.Upload;
+import com.dttv.hime_droid.models.ListAdapter;
+import com.dttv.hime_droid.R;
+import com.dttv.hime_droid.helpers.Constant;
+import com.dttv.hime_droid.models.ItemModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hime_droid.databinding.ActivityMainBinding;
+import com.dttv.hime_droid.databinding.ActivityMainBinding;
 
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -73,7 +74,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         Log.d("hello", "start app");
         try {
             String baihocs = new GetHttpRequest().execute(API_GETBAIHOC).get();
-            Log.d("baihocs ne: ", baihocs);
+            Log.d("API_GETBAIHOC ne: ", API_GETBAIHOC);
+            Log.d("baihocs ne: ", baihocs + " ");
             baihocGlobal = baihocs;
 
             JSONArray jArray = new JSONArray(baihocs);

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context="com.dttv.hime_droid.MainActivity">
     <!-- Note: A RecyclerView can also be used -->
 
     <androidx.core.widget.NestedScrollView

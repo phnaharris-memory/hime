@@ -7,6 +7,7 @@
         android:required="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -21,21 +22,21 @@
         android:theme="@style/Theme.Himedroid"
         tools:targetApi="31">
         <activity
-            android:name=".ListActivity"
+            android:name="com.dttv.hime_droid.ListActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".WebviewActivity"
+            android:name="com.dttv.hime_droid.WebviewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.dttv.hime_droid.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Himedroid.NoActionBar">

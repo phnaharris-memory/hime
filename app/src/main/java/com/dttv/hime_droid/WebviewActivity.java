@@ -1,4 +1,4 @@
-package com.example.hime_droid;
+package com.dttv.hime_droid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
